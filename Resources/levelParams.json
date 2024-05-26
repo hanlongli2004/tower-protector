@@ -1,0 +1,120 @@
+﻿[
+    {
+        "robot": {
+            "movement_speed": 3,
+            "summon_time": 5,
+            "properties": [
+                {
+                    "health": 100,
+                    "cp": 20
+                },
+                {
+                    "health": 200,
+                    "cp": 15
+                },
+                {
+                    "health": 80,
+                    "cp": 50
+                },
+                {
+                    "health": 150,
+                    "cp": 40
+                }
+            ]
+        },
+        "human": [
+            {
+                "cost": 300,
+                "health": 100
+            },
+            {
+                "cost": 500,
+                "health": 150
+            },
+            {
+                "cost": 800,
+                "health": 200
+            },
+            {
+                "cost": 1000,
+                "health": 250
+            }
+        ],
+        "bullet": {
+            "interval": 1.5,
+            "properties": [
+                {
+                    "cp": 30
+                },
+                {
+                    "cp": 40
+                },
+                {
+                    "cp": 60
+                },
+                {
+                    "cp": 80
+                }
+            ]
+        }
+    },
+    {
+        "robot": {
+            "movement_speed": 5,
+            "summon_time": 5,
+            "properties": [
+                {
+                    "health": 100,
+                    "cp": 20
+                },
+                {
+                    "health": 200,
+                    "cp": 15
+                },
+                {
+                    "health": 80,
+                    "cp": 50
+                },
+                {
+                    "health": 150,
+                    "cp": 40
+                }
+            ]
+        },
+        "human": [
+            {
+                "cost": 300,
+                "health": 100
+            },
+            {
+                "cost": 500,
+                "health": 150
+            },
+            {
+                "cost": 800,
+                "health": 200
+            },
+            {
+                "cost": 1000,
+                "health": 250
+            }
+        ],
+        "bullet": {
+            "interval": 1.5,
+            "properties": [
+                {
+                    "cp": 30
+                },
+                {
+                    "cp": 40
+                },
+                {
+                    "cp": 60
+                },
+                {
+                    "cp": 80
+                }
+            ]
+        }
+    }
+]

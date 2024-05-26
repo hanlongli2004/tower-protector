@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5B47AE2A-6A59-47A1-AA80-22E08DBDEB68}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>人類大戰機器人.My.MyApplication</StartupObject>
+    <RootNamespace>人類大戰機器人</RootNamespace>
+    <AssemblyName>人類大戰機器人</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>人類大戰機器人.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>人類大戰機器人.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BgmPlayer.vb" />
+    <Compile Include="FirstRound.Designer.vb">
+      <DependentUpon>FirstRound.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FirstRound.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameEnd.Designer.vb">
+      <DependentUpon>GameEnd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GameEnd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameObjects.vb" />
+    <Compile Include="LevelFailed.Designer.vb">
+      <DependentUpon>LevelFailed.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LevelFailed.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="levelParams.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="HomeMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.vb">
+      <DependentUpon>HomeMenu.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LevelFinish.Designer.vb">
+      <DependentUpon>LevelFinish.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LevelFinish.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="設定介面.Designer.vb">
+      <DependentUpon>設定介面.vb</DependentUpon>
+    </Compile>
+    <Compile Include="設定介面.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="遊戲劇情.Designer.vb">
+      <DependentUpon>遊戲劇情.vb</DependentUpon>
+    </Compile>
+    <Compile Include="遊戲劇情.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LevelSelection.Designer.vb">
+      <DependentUpon>LevelSelection.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LevelSelection.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FirstRound.resx">
+      <DependentUpon>FirstRound.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameEnd.resx">
+      <DependentUpon>GameEnd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeMenu.resx">
+      <DependentUpon>HomeMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LevelFinish.resx">
+      <DependentUpon>LevelFinish.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="設定介面.resx">
+      <DependentUpon>設定介面.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="遊戲劇情.resx">
+      <DependentUpon>遊戲劇情.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LevelFailed.resx">
+      <DependentUpon>LevelFailed.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LevelSelection.resx">
+      <DependentUpon>LevelSelection.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\Play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\主選單背景.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\靜音_開.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\靜音_關.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SettingBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PreviousBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarringBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EndBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewEndBackground.jpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewWarringBackground.jpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewPreviousBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New主選單背景.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\人類大戰機器人.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\對話框.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\科技未來人_備案.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Robot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\第一關.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\第二關.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\魔王關.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\一顆星.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\三顆星.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\兩顆星.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\主題_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\主題_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\跳過.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\金幣數量.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\劇情背景二.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\劇情背景一.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\劇情背景一1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\橘色機器人.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\夾夾怪.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\長腿怪.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\電擊怪.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\主選單 %2825%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\機器人贏人類.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\主畫面music.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\会议颁奖背景音乐.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\江湖游侠estp %28online-audio-converter.com%29.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\失敗 %28online-audio-converter.com%29.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ 日本武士.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\日本武士.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\步槍兵 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\和尚 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\巫婆.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\日本武士.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c1.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\巫婆.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\步槍兵1_1.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\巫婆1_1.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\日本武士1.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\和尚1.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\兵馬俑.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\步槍兵子彈.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\武士劍氣_彩色.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\魔法藥水.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\木魚.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\人類贏機器人.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\人類贏機器人.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\levelParams.json" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
